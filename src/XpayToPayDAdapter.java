@@ -1,10 +1,12 @@
 public class XpayToPayDAdapter implements PayD {
+    // ห้ามแก้ไข
     private final Xpay xpay;
 
     public XpayToPayDAdapter(Xpay xpay) {
         this.xpay = xpay;
     }
 
+    // -------------เลขเครดิตการ์ด---------------------//
     @Override
     public Long getCreditCardNo() {
         return Long.parseLong(xpay.getCreditCardNo());
@@ -15,6 +17,9 @@ public class XpayToPayDAdapter implements PayD {
         xpay.setCreditCardNo(String.valueOf(creditCardNo));
     }
 
+    //--------------------------------------------//
+
+    //----------------ชื่อคนถือบัตร-------------------//
     @Override
     public String getCustomerName() {
         return xpay.getCustomerName();
@@ -25,6 +30,9 @@ public class XpayToPayDAdapter implements PayD {
         xpay.setCustomerName(customerName);
     }
 
+    //--------------------------------------------//
+
+    //-----------------วันหมดอายุ-------------------//
     @Override
     public String getCardExpDate() {
         return xpay.getCardExpMonth() + "/" + xpay.getCardExpYear();
@@ -39,6 +47,9 @@ public class XpayToPayDAdapter implements PayD {
         }
     }
 
+    //--------------------------------------------//
+
+    //-------------------เลขCVV-------------------//
     @Override
     public Short getCardCVVNo() {
         return xpay.getCardCVVNo();
@@ -49,6 +60,9 @@ public class XpayToPayDAdapter implements PayD {
         xpay.setCardCVVNo(cardCVVNo);
     }
 
+    //------------------------------------------//
+
+    //-------------จำนวนเงินที่เหลือ------------------//
     @Override
     public Double getAmount() {
         return xpay.getAmount();
@@ -58,4 +72,6 @@ public class XpayToPayDAdapter implements PayD {
     public void setAmount(Double amount) {
         xpay.setAmount(amount);
     }
+
+    //-------------------------------------------//
 }

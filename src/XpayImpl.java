@@ -1,4 +1,6 @@
 public class XpayImpl implements Xpay {
+
+    // กำหนดตัวแปร ในเครดิตการ์ดใช้อะไรบ้าง
     private String creditCardNo;
     private String customerName;
     private String cardExpMonth;
@@ -6,6 +8,7 @@ public class XpayImpl implements Xpay {
     private Short cardCVVNo;
     private Double amount;
 
+    // -------------เลขเครดิตการ์ด---------------------//
     @Override
     public String getCreditCardNo() {
         return creditCardNo;
@@ -16,6 +19,9 @@ public class XpayImpl implements Xpay {
         this.creditCardNo = creditCardNo;
     }
 
+    //--------------------------------------------//
+
+    //----------------ชื่อคนถือบัตร-------------------//
     @Override
     public String getCustomerName() {
         return customerName;
@@ -26,6 +32,9 @@ public class XpayImpl implements Xpay {
         this.customerName = customerName;
     }
 
+    //--------------------------------------------//
+
+    //--------------วันหมดอายุ[เดือน]-----------------//
     @Override
     public String getCardExpMonth() {
         return cardExpMonth;
@@ -36,6 +45,9 @@ public class XpayImpl implements Xpay {
         this.cardExpMonth = cardExpMonth;
     }
 
+    //--------------------------------------------//
+
+    //------------วันหมดอายุ[ปี]---------------------//
     @Override
     public String getCardExpYear() {
         return cardExpYear;
@@ -46,6 +58,9 @@ public class XpayImpl implements Xpay {
         this.cardExpYear = cardExpYear;
     }
 
+    //-------------------------------------------//
+
+    //-------------------เลขCVV------------------//
     @Override
     public Short getCardCVVNo() {
         return cardCVVNo;
@@ -56,6 +71,9 @@ public class XpayImpl implements Xpay {
         this.cardCVVNo = cardCVVNo;
     }
 
+    //------------------------------------------//
+
+    //-------------จำนวนเงินที่เหลือ------------------//
     @Override
     public Double getAmount() {
         return amount;
@@ -65,4 +83,6 @@ public class XpayImpl implements Xpay {
     public void setAmount(Double amount) {
         this.amount = amount;
     }
+
+    //-------------------------------------------//
 }

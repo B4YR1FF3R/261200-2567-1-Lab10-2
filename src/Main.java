@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        // สร้าง Xpay และตั้งค่าข้อมูล
+        // สร้างบัตร Xpay และใส่ข้อมูล
         Xpay xpay = new XpayImpl();
         xpay.setCreditCardNo("4789565874102365");
         xpay.setCustomerName("Somchai Jaidee");
@@ -12,7 +12,7 @@ public class Main {
         // ใช้ Adapter แปลงเป็น PayD
         PayD payD = new XpayToPayDAdapter(xpay);
 
-        // แสดงข้อมูลหลังจากแปลง
+        // ดูข้อมูลหลังจากแปลงเป็น PayD
         System.out.println("Customer Name: " + payD.getCustomerName());
         System.out.println("Credit Card No: " + payD.getCreditCardNo());
         System.out.println("Card Expiry Date: " + payD.getCardExpDate());
