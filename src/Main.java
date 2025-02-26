@@ -12,11 +12,14 @@ public class Main {
         // ใช้ Adapter แปลงเป็น PayD
         PayD payD = new XpayToPayDAdapter(xpay);
 
+        /*
         // ดูข้อมูลหลังจากแปลงเป็น PayD
         System.out.println("Customer Name: " + payD.getCustomerName());
         System.out.println("Credit Card No: " + payD.getCreditCardNo());
         System.out.println("Card Expiry Date: " + payD.getCardExpDate());
         System.out.println("CVV: " + payD.getCardCVVNo());
         System.out.println("Amount: " + payD.getAmount());
+
+         */
     }
 }
